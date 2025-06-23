@@ -105,18 +105,35 @@
 
 @layer components {
   .pixel-border {
-    border-radius: 0;
+    border-radius: 0 !important;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    image-rendering: optimize-contrast;
   }
 
   .pixel-text {
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
     font-weight: bold;
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    image-rendering: optimize-contrast;
+  }
+
+  .pixel-alien {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimize-contrast;
+    border-radius: 0;
+  }
+
+  .pixel-square {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: optimize-contrast;
+    border-radius: 0;
   }
 }

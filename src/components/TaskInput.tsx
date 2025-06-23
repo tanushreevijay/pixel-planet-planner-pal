@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Plus } from "lucide-react";
 
 interface TaskInputProps {
   onAddTask: (text: string) => void;
@@ -24,18 +23,17 @@ export const TaskInput = ({ onAddTask }: TaskInputProps) => {
       <div className="flex-1 relative">
         <Input
           type="text"
-          placeholder="Enter your mission, space cadet..."
+          placeholder="NEW MISSION..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          className="pixel-border bg-purple-100 border-2 border-purple-300 focus:border-purple-500 text-purple-800 placeholder:text-purple-400 h-12 text-lg"
+          className="pixel-border bg-white border-4 border-black text-black placeholder:text-gray-500 h-12 text-lg pixel-text"
         />
       </div>
       <Button
         type="submit"
-        className="pixel-border bg-pink-200 hover:bg-pink-300 text-purple-800 border-2 border-purple-300 h-12 px-6"
+        className="pixel-border bg-pink-400 hover:bg-pink-500 text-black border-4 border-black h-12 px-6 pixel-text font-bold"
       >
-        <Plus className="w-5 h-5" />
-        <span className="ml-2 font-semibold">Add Mission</span>
+        ADD
       </Button>
     </form>
   );

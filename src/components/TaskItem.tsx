@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Task } from "@/pages/Index";
@@ -19,10 +18,10 @@ export const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
 
   return (
     <div 
-      className={`pixel-border p-4 ${
+      className={`pixel-border border-4 border-black p-4 ${
         task.completed 
-          ? 'border-green-300 bg-green-100' 
-          : 'border-purple-300 bg-purple-100'
+          ? 'bg-green-300' 
+          : 'bg-purple-300'
       }`}
     >
       <div className="flex items-center gap-4">
@@ -39,21 +38,18 @@ export const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
           <Checkbox
             checked={task.completed}
             onCheckedChange={() => onToggle(task.id)}
-            className="w-5 h-5 border-2 border-purple-400 data-[state=checked]:bg-green-400 data-[state=checked]:border-green-400"
+            className="w-6 h-6 border-4 border-black pixel-border data-[state=checked]:bg-black"
           />
         </div>
 
         {/* Task Text */}
         <div className="flex-1 min-w-0">
-          <p className={`text-lg ${
+          <p className={`text-lg pixel-text font-bold ${
             task.completed 
-              ? 'line-through text-green-700' 
-              : 'text-purple-800'
+              ? 'line-through text-black' 
+              : 'text-black'
           }`}>
             {task.text}
-          </p>
-          <p className="text-xs text-purple-500 mt-1">
-            Created {task.createdAt.toLocaleDateString()} at {task.createdAt.toLocaleTimeString()}
           </p>
         </div>
 
@@ -61,11 +57,9 @@ export const TaskItem = ({ task, onToggle, onDelete }: TaskItemProps) => {
         <div className="flex-shrink-0">
           <Button
             onClick={handleDelete}
-            variant="ghost"
-            size="sm"
-            className="text-red-500 hover:text-red-700 hover:bg-red-100 pixel-border border border-transparent hover:border-red-300"
+            className="pixel-border bg-red-400 hover:bg-red-500 text-black border-4 border-black w-8 h-8 p-0 pixel-text font-bold"
           >
-            🗑️
+            X
           </Button>
         </div>
       </div>
