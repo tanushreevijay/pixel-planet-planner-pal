@@ -40,10 +40,10 @@ const Index = () => {
   const totalCount = tasks.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 p-4">
+    <div className="min-h-screen bg-blue-50 p-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8 animate-fade-in">
+        <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-4 mb-4">
             <AlienMascot variant="happy" />
             <h1 className="text-4xl font-bold text-purple-800 pixel-text">
@@ -51,11 +51,11 @@ const Index = () => {
             </h1>
             <AlienMascot variant="winking" />
           </div>
-          <p className="text-purple-600 text-lg">
+          <p className="text-purple-700 text-lg">
             Complete your earthly missions, space explorer! 🛸
           </p>
           {totalCount > 0 && (
-            <div className="mt-4 text-sm text-purple-500">
+            <div className="mt-4 text-sm text-purple-600">
               Progress: {completedCount}/{totalCount} missions completed
             </div>
           )}
@@ -69,9 +69,9 @@ const Index = () => {
         {/* Task List */}
         <div className="space-y-4">
           {tasks.length === 0 ? (
-            <div className="text-center py-12 animate-fade-in">
+            <div className="text-center py-12">
               <AlienMascot variant="sleeping" size="large" />
-              <p className="text-purple-500 mt-4 text-lg">
+              <p className="text-purple-600 mt-4 text-lg">
                 No missions yet! Add your first task above. 👽
               </p>
             </div>
@@ -85,7 +85,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12 text-purple-400 text-sm">
+        <div className="text-center mt-12 text-purple-500 text-sm">
           Made with 💜 by your friendly alien overlords
         </div>
       </div>

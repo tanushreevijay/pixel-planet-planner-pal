@@ -20,8 +20,8 @@ export const AlienMascot = ({ variant = "happy", size = "medium" }: AlienMascotP
   };
 
   return (
-    <div className={`${sizeClasses[size]} flex items-center justify-center animate-pulse`}>
-      <span className="animate-bounce" style={{ animationDelay: Math.random() * 2 + "s" }}>
+    <div className={`${sizeClasses[size]} flex items-center justify-center`}>
+      <span className="pixel-text">
         {aliens[variant]}
       </span>
     </div>
